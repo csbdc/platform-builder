@@ -1,0 +1,32 @@
+---
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: selfsigned-issuer
+spec:
+  selfSigned: {}
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: home-root-ca
+  namespace: cert-manager
+spec:
+  isCA: true
+  commonName: Home Root CA
+  secretName: home-root-ca
+  duration: 175200h
+  privateKey:
+    algorithm: ECDSA
+    size: 256
+  issuerRef:
+    name: selfsigned-issuer
+    kind: ClusterIssuer
+---
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: home-ca-issuer
+spec:
+  ca:
+    secretName: home-root-ca
