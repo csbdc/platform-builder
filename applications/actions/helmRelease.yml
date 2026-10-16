@@ -1,0 +1,15 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: actions-runner-controller
+spec:
+  interval: 15m
+  timeout: 5m
+  chart:
+    spec:
+      chart: actions-runner-system
+      sourceRef:
+        kind: HelmRepository
+        name: actions-runner-controller
+      interval: 5m
+  releaseName: actions-runner-controller
