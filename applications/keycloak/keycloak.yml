@@ -4,5 +4,9 @@ metadata:
   name: keycloak
   namespace: default
 spec:
+  http:
+    tlsSecret: keycloak-tls
+  ingress:
+    enabled: true
   hostname:
-    hostname: test.keycloak.org
+    hostname: keycloak.home.arpa
