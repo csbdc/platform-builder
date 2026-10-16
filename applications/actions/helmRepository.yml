@@ -4,5 +4,4 @@ metadata:
   name: actions-runner-controller
 spec:
   interval: 15m
-  type: git
   url: https://actions-runner-controller.github.io/actions-runner-controller
