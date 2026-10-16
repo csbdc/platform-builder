@@ -30,6 +30,8 @@ kind: Kustomization
 metadata:
   name: keycloak
 spec:
+  dependsOn:
+    - keycloak-operator
   interval: 10m
   sourceRef:
     kind: GitRepository
