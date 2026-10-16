@@ -18,8 +18,7 @@ metadata:
   name: harbor
 spec:
   dependsOn:
-    - name: keycloak-operator
-    - name: cert-manager
+    - name: certificates
   interval: 10m
   sourceRef:
     kind: GitRepository
@@ -35,7 +34,7 @@ metadata:
 spec:
   dependsOn:
     - name: keycloak-operator
-    - name: cert-manager
+    - name: certificates
   interval: 10m
   sourceRef:
     kind: GitRepository
