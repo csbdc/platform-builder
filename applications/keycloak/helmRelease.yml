@@ -9,7 +9,7 @@ spec:
   chart:
     spec:
       version: "26.8"
-      chart: keycloak-operator
+      chart: keycloak-operator-helm
       sourceRef:
         kind: HelmRepository
         name: keycloak
