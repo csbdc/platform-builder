@@ -4,7 +4,6 @@ metadata:
   name: harbor
 spec:
   install:
-  targetNamespace: harbor
   interval: 10m
   chart:
     spec:
