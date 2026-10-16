@@ -4,3 +4,4 @@ namespace: flux-system
 resources:
   - operators.yml
   - applications.yml
+  - cluster-config.yml
