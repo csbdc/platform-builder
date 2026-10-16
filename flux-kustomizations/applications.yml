@@ -31,7 +31,7 @@ metadata:
   name: keycloak
 spec:
   dependsOn:
-    - keycloak-operator
+    - name: keycloak-operator
   interval: 10m
   sourceRef:
     kind: GitRepository
