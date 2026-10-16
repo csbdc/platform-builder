@@ -7,7 +7,7 @@ spec:
   timeout: 5m
   chart:
     spec:
-      chart: actions-runner-system
+      chart: gha-runner-scale-set-controller
       sourceRef:
         kind: HelmRepository
         name: actions-runner-controller
