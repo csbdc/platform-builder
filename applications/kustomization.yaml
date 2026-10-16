@@ -3,6 +3,7 @@ kind: Kustomization
 resources:
   # - coder/
   # - github/
-  # - harbor/
+  - harbor
   - keycloak
+  - metrics-server
   # - owncloud/
