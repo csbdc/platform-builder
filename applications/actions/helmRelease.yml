@@ -13,3 +13,21 @@ spec:
         name: actions-runner-controller
       interval: 5m
   releaseName: actions-runner-controller
+---
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: gha-runner-scale-set
+spec:
+  interval: 15m
+  timeout: 5m
+  chart:
+    spec:
+      chart: gha-runner-scale-set
+      sourceRef:
+        kind: HelmRepository
+        name: actions-runner-controller
+      interval: 5m
+  releaseName: gha-runner-scale-set
+  values:
+    githubConfigSecret: actions-secret
