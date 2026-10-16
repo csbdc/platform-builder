@@ -1,8 +1,8 @@
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: HelmRepository
 metadata:
-  name: podinfo
+  name: keycloak
   namespace: default
 spec:
   interval: 15m
-  url: https://stefanprodan.github.io/podinfo
+  url: oci://quay.io/keycloak/
