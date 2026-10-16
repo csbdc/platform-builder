@@ -3,7 +3,6 @@ kind: HelmRelease
 metadata:
   name: harbor
 spec:
-  install:
   interval: 10m
   chart:
     spec:
