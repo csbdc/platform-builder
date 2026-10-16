@@ -8,5 +8,6 @@ spec:
     tlsSecret: keycloak-tls
   ingress:
     enabled: true
+    className: nginx
   hostname:
     hostname: keycloak.home.arpa
