@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
   - helmRepository.yml
   - helmRelease.yml
+  - keycloak.yml
