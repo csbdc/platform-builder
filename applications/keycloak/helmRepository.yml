@@ -2,7 +2,6 @@ apiVersion: source.toolkit.fluxcd.io/v1
 kind: HelmRepository
 metadata:
   name: keycloak
-  namespace: default
 spec:
   interval: 15m
   type: oci
