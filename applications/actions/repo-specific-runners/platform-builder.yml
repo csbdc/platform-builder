@@ -2,7 +2,7 @@
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
-  name: gha-runner-scale-set_platform-builder
+  name: gha-runner-scale-set-platform-builder
 spec:
   interval: 15m
   timeout: 5m
