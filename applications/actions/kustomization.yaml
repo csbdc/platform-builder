@@ -5,3 +5,4 @@ resources:
   - namespace.yml
   - helmRepository.yml
   - helmRelease.yml
+  - repo-specific-runners
