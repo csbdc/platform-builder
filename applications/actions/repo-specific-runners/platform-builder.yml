@@ -17,3 +17,9 @@ spec:
   values:
     githubConfigUrl: "https://github.com/csbdc/platform-builder"
     githubConfigSecret: actions-secret
+    template:
+      spec:
+        containers:
+          - name: runner
+            image: harbor.home.arpa/library/actions-runner-buildkit@sha256:fdeb5f56d4618218b78137dae48f01fcc3812686803e49160a30d92e64abd250
+            command: ["/home/runner/run.sh"]
