@@ -24,4 +24,4 @@ spec:
             image: harbor.home.arpa/library/actions-runner-buildkit@sha256:fdeb5f56d4618218b78137dae48f01fcc3812686803e49160a30d92e64abd250
             command: ["/home/runner/run.sh"]
           - name: buildkit
-            image: mobey/buildkit:rootless
+            image: harbor.home.arpa/library/moby/buildkit:rootless
