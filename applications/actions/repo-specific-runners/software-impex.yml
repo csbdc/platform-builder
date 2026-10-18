@@ -29,3 +29,12 @@ spec:
               - --addr
               - tcp://127.0.0.1:1234
               - --oci-worker-no-process-sandbox
+            volumeMounts:
+              - name: harbor-ca
+                mountPath: /usr/local/share/ca-certificates/harbor-ca.crt
+                subPath: ca.crt
+                readOnly: true
+        volumes:
+          - name: harbor-ca
+            configMap:
+              name: harbor-ingress
