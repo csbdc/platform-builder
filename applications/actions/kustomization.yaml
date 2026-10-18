@@ -6,4 +6,4 @@ resources:
   - helmRepository.yml
   - helmRelease.yml
   - repo-specific-runners
-  - donfigMap.yml
+  - configMap.yml
