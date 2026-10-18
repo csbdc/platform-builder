@@ -36,5 +36,5 @@ spec:
                 readOnly: true
         volumes:
           - name: harbor-ca
-            configMap:
+            secret:
               name: harbor-ingress
