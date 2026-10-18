@@ -31,10 +31,12 @@ spec:
               - --oci-worker-no-process-sandbox
             volumeMounts:
               - name: harbor-ca
-                mountPath: /usr/local/share/ca-certificates/harbor-ca.crt
-                subPath: ca.crt
+                mountPath: /etc/buildkit/certs
                 readOnly: true
         volumes:
           - name: harbor-ca
             secret:
               secretName: harbor-ingress
+              items:
+                - key: ca.crt
+                  path: ca.crt
