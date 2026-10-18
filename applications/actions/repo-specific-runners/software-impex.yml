@@ -28,10 +28,16 @@ spec:
             args:
               - --addr
               - tcp://127.0.0.1:1234
-              - --oci-worker-no-process-sandbox
+              - --oci-worker-no-process-
+              - --config
+              - /etc/buildkit/buildkitd.toml
             volumeMounts:
               - name: harbor-ca
                 mountPath: /etc/buildkit/certs
+                readOnly: true
+              - name: buildkit-config
+                mountPath: /etc/buildkit/buildkitd.toml
+                subPath: buildkitd.toml
                 readOnly: true
         volumes:
           - name: harbor-ca
@@ -40,3 +46,9 @@ spec:
               items:
                 - key: ca.crt
                   path: ca.crt
+          - name: buildkit-config
+            configMap:
+              name: buildkit-config
+              items:
+                - key: buildkitd.toml
+                  path: buildkitd.toml

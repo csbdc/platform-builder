@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: buildkit-config
+data:
+  buildkitd.toml: |
+    [registry."harbor.home.arpa"]
+      ca = ["/etc/buildkit/certs/ca.crt"]

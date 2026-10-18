@@ -6,3 +6,4 @@ resources:
   - helmRepository.yml
   - helmRelease.yml
   - repo-specific-runners
+  - ConfigMap.yml
