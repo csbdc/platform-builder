@@ -23,6 +23,10 @@ spec:
           - name: runner
             image: harbor.home.arpa/library/actions-runner-buildkit@sha256:fdeb5f56d4618218b78137dae48f01fcc3812686803e49160a30d92e64abd250
             command: ["/home/runner/run.sh"]
+            volumeMounts:
+              - name: harbor-ca
+                mountPath: /etc/buildkit/certs
+                readOnly: true
           - name: buildkit
             image: harbor.home.arpa/library/moby/buildkit:rootless
             args:
